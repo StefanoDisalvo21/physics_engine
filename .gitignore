@@ -1,0 +1,13 @@
+/build/
+/CMakeFiles/
+/cmake-build-*/
+/bin/
+/lib/
+.DS_Store
+Thumbs.db
+.vscode/
+*.o
+*.obj
+*.exe
+*.out
+*.log
