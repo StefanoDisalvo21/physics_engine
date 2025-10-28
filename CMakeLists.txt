@@ -13,3 +13,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 #including subdir
 add_subdirectory(src)
+
+#including raylib
+target_link_libraries(simulation_physics PRIVATE raylib::raylib)

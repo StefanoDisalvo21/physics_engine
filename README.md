@@ -4,7 +4,7 @@
     of high school and aims to apply physics
     knowledge without leaving it only concepts.
     Thus I thought to build a 3D physics engine taht 
-    simulates gravity, with the help of raylib
+    simulates gravity, with the help of raylib.
     The project itself isn't anything new but it
     has been thought to be a way to learn different
     things (see goals) and apply maths/phisics which are 

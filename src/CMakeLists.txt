@@ -12,4 +12,3 @@ add_executable(simulation_physics main.cpp)
 
 #linking libraries
 target_link_libraries(simulation_physics PRIVATE physic_engine)
-target_link_libraries(simulation_physics PRIVATE raylib::raylib)
