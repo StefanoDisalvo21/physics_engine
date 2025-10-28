@@ -11,8 +11,18 @@ find_package(raylib CONFIG REQUIRED)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-#including subdir
-add_subdirectory(src)
+#creating library composed of various file
+add_library(physics_engine
+    src/physics_simulation.cpp
+    src/application.cpp
+)
 
-#including raylib
-target_link_libraries(simulation_physics PRIVATE raylib::raylib)
+#including headers
+target_include_directories(physics_engine PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
+#adding executable
+add_executable(simulation_physics src/main.cpp)
+
+#linking libraries
+target_link_libraries(simulation_physics PRIVATE physics_engine)
+target_link_libraries(simulation_physics PRIVATE ${RAYLIB_LIBRARIES})
