@@ -21,6 +21,8 @@ void Application_Exectution::run_application(){
         //Setting background to black
         ClearBackground(VIOLET);
         BeginMode3D(camera);
+        Vector3 myTempVect {0.0f,20.0f,0.0f};
+        DrawSphere(myTempVect,1.0f,LIGHTGRAY);
         EndMode3D();
         EndDrawing();
     }//end game loop
