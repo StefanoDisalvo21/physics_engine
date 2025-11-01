@@ -12,20 +12,18 @@ void Application_Exectution::run_application(){
     camera.up = (Vector3){ 0.0f, 1.0f, 0.0f };         
     camera.fovy = 45.0f;                               
     camera.projection = CAMERA_PERSPECTIVE;
-
+    //Intialize the object for the physics computations
+    Physics_Simualtion p_body;
     //game loop until window cloased closed
     while (!WindowShouldClose())
     {
-        //start 
         BeginDrawing();
-        //Setting background to black
         ClearBackground(VIOLET);
         BeginMode3D(camera);
-        Vector3 myTempVect {0.0f,20.0f,0.0f};
-        DrawSphere(myTempVect,1.0f,LIGHTGRAY);
+        p_body.run_simulation();
         EndMode3D();
         EndDrawing();
     }//end game loop
     //closing window
     CloseWindow();
-}//end run app;
+}//end run app

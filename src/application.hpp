@@ -11,4 +11,5 @@ class Application_Exectution{
         const int dimension_screen_x = 1000;
     public:
         void run_application();
+        void run_simulation();
 };
