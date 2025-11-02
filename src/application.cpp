@@ -7,7 +7,7 @@ void Application_Exectution::run_application(){
     SetTargetFPS(60);
     //initialize 3D camera for the environment
     Camera3D camera = { 0 };
-    camera.position = (Vector3){ 15.0f, 25.0f, 20.0f };
+    camera.position = (Vector3){ 15.0f, 250.0f, 20.0f };
     camera.target = (Vector3){ 0.0f, 10.0f, 0.0f };     
     camera.up = (Vector3){ 0.0f, 1.0f, 0.0f };         
     camera.fovy = 45.0f;                               
