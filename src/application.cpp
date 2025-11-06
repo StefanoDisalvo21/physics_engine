@@ -1,4 +1,5 @@
 #include "application.hpp"
+#include "planets.hpp"
 using namespace std;
 
 void Application_Exectution::run_application(){
@@ -17,10 +18,11 @@ void Application_Exectution::run_application(){
     //game loop until window cloased closed
     while (!WindowShouldClose())
     {
+        float gravity_constant;
         BeginDrawing();
         ClearBackground(VIOLET);
         BeginMode3D(camera);
-        p_body.run_simulation();
+        p_body.run_simulation(gravity_constant);
         EndMode3D();
         EndDrawing();
     }//end game loop

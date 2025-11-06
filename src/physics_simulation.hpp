@@ -14,6 +14,7 @@ class Physics_Simualtion {
         const float get_z() const{ return body_coordinate.z;};
         const Position  get_position() const{ return body_coordinate;}
         const float get_radius() const { return radius;}
-        void run_simulation();
+        void run_simulation(float gravity_constant);
+        void insert_planet_gravity(int key);
         void update_position();
 };
