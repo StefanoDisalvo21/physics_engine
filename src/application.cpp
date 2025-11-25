@@ -24,6 +24,9 @@ void Application_Exectution::run_application(){
         p_body.run_simulation();
         EndMode3D();
         EndDrawing();
+        DrawText("Press 1-8 to select a planet", 10, 10, 20, RAYWHITE);
+        DrawText(TextFormat("The selected planet: %s",p_body.get_selected_planet().c_str()), 10, 30, 20, RAYWHITE);
+        DrawText("Press 0 to start simulation", 10, 50, 20, RAYWHITE);
     }//end game loop
     //closing window
     CloseWindow();

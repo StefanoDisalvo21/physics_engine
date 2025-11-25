@@ -16,7 +16,7 @@ void Physics_Simualtion::update_position(){
 
 
 void Physics_Simualtion::insert_planet_gravity(){
-if (IsKeyPressed(KEY_ONE) || IsKeyPressed(KEY_TWO) || IsKeyPressed(KEY_THREE) || IsKeyPressed(KEY_FOUR) || 
+    if (IsKeyPressed(KEY_ONE) || IsKeyPressed(KEY_TWO) || IsKeyPressed(KEY_THREE) || IsKeyPressed(KEY_FOUR) || 
         IsKeyPressed(KEY_FIVE) || IsKeyPressed(KEY_SIX) || IsKeyPressed(KEY_SEVEN) || IsKeyPressed(KEY_EIGHT)) {
         // Get the key that was pressed.
         int key = GetKeyPressed();
@@ -64,8 +64,6 @@ if (IsKeyPressed(KEY_ONE) || IsKeyPressed(KEY_TWO) || IsKeyPressed(KEY_THREE) ||
             default:
                 // No planet key pressed
                 break;
-        }
-        
-    }
- 
-}
+        }//end switch  
+    }//end if - key selection
+}//end procedure
