@@ -27,6 +27,7 @@ void Application_Exectution::run_application(){
         DrawText("Press 1-8 to select a planet", 10, 10, 20, RAYWHITE);
         DrawText(TextFormat("The selected planet: %s",p_body.get_selected_planet().c_str()), 10, 30, 20, RAYWHITE);
         DrawText("Press 0 to start simulation", 10, 50, 20, RAYWHITE);
+        DrawText("Press R to Reset", 10, 70, 20, RAYWHITE);
     }//end game loop
     //closing window
     CloseWindow();

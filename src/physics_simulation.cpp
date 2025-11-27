@@ -3,15 +3,26 @@ using namespace std;
 
 void Physics_Simualtion::run_simulation(){
     //simulation
-    //starting
+    //drawing the sphere
     Vector3 sphere_position{body_coordinate.x,body_coordinate.y,body_coordinate.z};
     DrawSphere(sphere_position,radius,selected_color);
-
+    //check to start
+    if(IsKeyPressed(KEY_ZERO)){
+        //updating position
+        update_position();
+    }
+    else if(IsKeyPressed(KEY_R)){
+        //reset body coordinates
+        body_coordinate.y=200.0f;
+    }
 }
 
 //updating position
 void Physics_Simualtion::update_position(){
-    
+    //test phase - not implemented yet
+    do{
+        body_coordinate.y-=gravity_constant;
+    }while(body_coordinate.y>0);
 }
 
 
