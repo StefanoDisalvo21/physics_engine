@@ -6,7 +6,7 @@ using namespace std;
 
 class Physics_Simualtion {
     private:
-        Position body_coordinate{0.0f,200.0f,0.0f};
+        Position body_coordinate{0.0f,20.0f,0.0f};
         float radius = 1.0f;
         double gravity_constant = 9.81;
         int selected_planet_index = 1;

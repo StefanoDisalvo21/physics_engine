@@ -17,7 +17,7 @@ void Physics_Simualtion::run_simulation(){
         //reset the possibility to change planet
         is_planet_selected=false;
         //reset body coordinates
-        body_coordinate.y=200.0f;
+        body_coordinate.y=20.0f;
     }
 }
 
@@ -26,7 +26,7 @@ void Physics_Simualtion::update_position(){
     //test phase - not implemented yet
     do{
         body_coordinate.y-=gravity_constant;
-    }while(body_coordinate.y>0);
+    }while(body_coordinate.y>0.0f);
 }
 
 

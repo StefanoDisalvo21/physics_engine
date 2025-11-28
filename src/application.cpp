@@ -7,7 +7,7 @@ void Application_Exectution::run_application(){
     SetTargetFPS(60);
     //initialize 3D camera for the environment
     Camera3D camera = { 0 };
-    camera.position = (Vector3){ 15.0f, 250.0f, 20.0f };
+    camera.position = (Vector3){ 15.0f, 30.0f, 50.0f };
     camera.target = (Vector3){ 0.0f, 10.0f, 0.0f };     
     camera.up = (Vector3){ 0.0f, 1.0f, 0.0f };         
     camera.fovy = 45.0f;                               
@@ -19,15 +19,16 @@ void Application_Exectution::run_application(){
     {
         p_body.insert_planet_gravity();
         BeginDrawing();
-        ClearBackground(VIOLET);
+        ClearBackground(BLACK);
         BeginMode3D(camera);
+        DrawPlane((Vector3){0.0f, 0.0f, 0.0f}, (Vector2){50.0f, 50.0f}, VIOLET); 
         p_body.run_simulation();
         EndMode3D();
         EndDrawing();
         DrawText("Press 1-8 to select a planet", 10, 10, 20, RAYWHITE);
-        DrawText(TextFormat("The selected planet: %s",p_body.get_selected_planet().c_str()), 10, 30, 20, RAYWHITE);
-        DrawText("Press 0 to start simulation", 10, 50, 20, RAYWHITE);
-        DrawText("Press R to Reset", 10, 70, 20, RAYWHITE);
+        DrawText(TextFormat("The selected planet: %s",p_body.get_selected_planet().c_str()), 10, 70, 20, RAYWHITE);
+        DrawText("Press 0 to start simulation", 10, 30, 20, RAYWHITE);
+        DrawText("Press R to Reset", 10, 50, 20, RAYWHITE);
     }//end game loop
     //closing window
     CloseWindow();
