@@ -6,13 +6,15 @@ using namespace std;
 
 class Physics_Simualtion {
     private:
-        Position body_coordinate{0.0f,20.0f,0.0f};
-        float radius = 1.0f;
+        Position body_coordinate{0.0f,30.0f,0.0f};
+        const float ground =1.0f;
+        float radius = 1.0f, speed=0;
         double gravity_constant = 9.81;
         int selected_planet_index = 1;
         Color selected_color = BLUE;
         vector<string> planets = {"Earth","Mars","Mercury","Venus","Jupiter","Saturn","Uranus","Neptune"};
         bool is_planet_selected=false;
+        bool is_simulation_running=false;
     public:
         const string get_selected_planet() const{return planets[selected_planet_index-1];};
         const float get_x() const{ return body_coordinate.x;};

@@ -9,26 +9,37 @@ void Physics_Simualtion::run_simulation(){
     //check to start
     if(IsKeyPressed(KEY_ZERO)){
         //preventing from changing planets until reset
+        speed=0;
         is_planet_selected=true;
-        //updating position
-        update_position();
+        is_simulation_running=true;
     }
     else if(IsKeyPressed(KEY_R)){
         //reset the possibility to change planet
         is_planet_selected=false;
+        is_simulation_running=false;
         //reset body coordinates
-        body_coordinate.y=20.0f;
+        body_coordinate.y=30.0f;
+    }
+
+    if(is_simulation_running==true){
+        update_position();
     }
 }
 
 //updating position
 void Physics_Simualtion::update_position(){
+    //variables
+    float delta_time=0;
+    delta_time=GetFrameTime();
+    speed += gravity_constant*delta_time;
+    body_coordinate.y-= (speed*delta_time);
     //test phase - not implemented yet
-    do{
-        body_coordinate.y-=gravity_constant;
-    }while(body_coordinate.y>0.0f);
+    if(body_coordinate.y<=ground){
+        body_coordinate.y=ground;
+        speed=0;
+        return;
+    }
 }
-
 
 void Physics_Simualtion::insert_planet_gravity(){
     //checking if the wanted planet has been selected
