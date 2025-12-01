@@ -30,10 +30,11 @@ void Physics_Simualtion::run_simulation(){
 void Physics_Simualtion::update_position(){
     //variables
     float delta_time=0;
+    //calc
     delta_time=GetFrameTime();
     speed += gravity_constant*delta_time;
     body_coordinate.y-= (speed*delta_time);
-    //test phase - not implemented yet
+    //check if the sphere has reached the ground
     if(body_coordinate.y<=ground){
         body_coordinate.y=ground;
         speed=0;
