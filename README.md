@@ -15,6 +15,17 @@
     because I wanted to do more than we do
     in high  school so here I am doing errors and
     trying to improve daily.
+## Status
+    The project has been completed as it was thought.
+    The main difficulty was to manage the graphical part
+    but I managed to do it.
+    In conclusion the project has been useful for many reason
+    from improving my coding and architectural skills but it
+    was also useful because it helped me to understand better
+    that the graphic part is not something I really enjoy and
+    I'd rather focussing on Algorithms and the logical part
+    than having to deal with the graphics but it was still cool
+    to understand how it works.
 ## Goals 🎯
     - Learn how to apply physics and maths
     - Improve "software design" skills
